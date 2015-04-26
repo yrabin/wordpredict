@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\n\ntextareaInput <- function(inputId, label, value=\"\", placeholder=\"\", rows=2) {\n  tagList(\n    div(strong(label), style=\"margin-top: 5px;\"),\n    tags$style(type=\"text/css\", \"textarea {width:100%; margin-top: 5px;}\"),\n    tags$textarea(id = inputId, placeholder = placeholder, rows = rows, value))\n}\n\n\nshinyUI(fluidPage(\n  \n  fluidRow( class = 'titleRow',\n            column(width = 12, align='center',\n                   # Application title\n                   headerPanel(\"Word Prediction\")\n            )\n  ),\n  \n  fluidRow( class = 'resultRow',\n            column(width = 12,  align='center',\n                   uiOutput(\"prediction\")\n            )\n  ),\n  \n  # Multi-text input box\n  fluidRow( class = 'inputRow',\n            column(width = 12,  align='center',\n                   textareaInput(\"multitxt\", \"Enter text:\", rows=5)\n            )\n  ),\n  \n  tags$head(tags$style(\"\n      .titleRow  { height:80px; }\n      .resultRow { height:80px;  background-color:rgb(233,233,233); }\n      .inputRow  { height:150px; }\n      .debugRow  { height:350px; background-color:pink; }\n  \"))\n\n))\n",
+    "created" : 1429855945411.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3101660588",
+    "id" : "BE643F9E",
+    "lastKnownWriteTime" : 1429860186,
+    "path" : "D:/EDU/coursera/capstone/wordpredict/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

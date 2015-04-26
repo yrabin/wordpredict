@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyServer(function(input, output) {\n\n  output$prediction <- renderUI({\n    HTML(predictWord(input$multitxt))\n  })\n\n})\n",
+    "created" : 1429934379277.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2430498705",
+    "id" : "3C3E19CA",
+    "lastKnownWriteTime" : 1429932823,
+    "path" : "/media/Data/EDU/coursera/ida_datasci/[10] Data Science Capstone/source/wordpredict/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
